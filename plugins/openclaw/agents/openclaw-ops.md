@@ -4,11 +4,16 @@ model: sonnet
 color: red
 description: >
   Use when the user asks about OpenClaw gateway management, channel setup,
-  configuration, troubleshooting, node pairing, device management, or AI
-  assistant deployment. Triggers on "check openclaw", "configure telegram",
-  "gateway not responding", "set up whatsapp", "add agent", "restart gateway",
-  "pair a device", "openclaw status", "openclaw not working", "connect discord",
-  "openclaw doctor", "view openclaw logs".
+  configuration, troubleshooting, node pairing, device management, AI
+  assistant deployment, agent team design, agent operations, multi-user
+  access, or workspace sharing. Triggers on "check openclaw",
+  "configure telegram", "gateway not responding", "set up whatsapp",
+  "add agent", "restart gateway", "pair a device", "openclaw status",
+  "openclaw not working", "connect discord", "openclaw doctor",
+  "view openclaw logs", "agent team", "soul.md", "agent hierarchy",
+  "team structure", "agent best practices", "cron schedule", "multi-user",
+  "workspace access", "user pairing", "session isolation", "share gateway",
+  "add user".
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 ---
 
@@ -34,6 +39,8 @@ which openclaw && openclaw --version
    - **openclaw-channels**: Channel setup (Telegram, WhatsApp, Discord, Slack), DM policies, pairing
    - **openclaw-troubleshooting**: Diagnostics, common issues, decision trees
    - **openclaw-multi-agent**: Multi-agent routing, bindings, sandboxing
+   - **openclaw-multi-user-workspaces**: Multi-user access, session isolation, pairing, trust model
+   - **openclaw-agent-teams**: Agent team design, SOUL.md, hierarchy, memory architecture
 
 4. For detailed information beyond the skills, reference crawled docs at `.crawled/docs.openclaw.ai/`.
 
