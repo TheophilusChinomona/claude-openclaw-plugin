@@ -1,0 +1,17 @@
+{
+  "name": "openclaw-local",
+  "owner": {
+    "name": "theoc"
+  },
+  "metadata": {
+    "description": "OpenClaw gateway management plugin for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "openclaw",
+      "version": "0.1.0",
+      "source": "./plugins/openclaw",
+      "description": "Set up and manage your OpenClaw self-hosted AI gateway"
+    }
+  ]
+}
