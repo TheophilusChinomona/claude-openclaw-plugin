@@ -21,7 +21,9 @@ description: >
   "incident response", "secret management", "docker sandbox", "sandbox mode",
   "container isolation", "bind mount", "sandbox browser", "node command",
   "remote execution", "exec routing", "pair device", "headless node",
-  "exec approval", "backup openclaw", "update openclaw".
+  "exec approval", "backup openclaw", "update openclaw",
+  "multi-agent team", "agent collaboration", "commander specialist",
+  "agent operating system", "agent OS", "mention gating team".
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 ---
 
@@ -49,6 +51,7 @@ which openclaw && openclaw --version
    - **openclaw-multi-agent**: Multi-agent routing, bindings, sandboxing
    - **openclaw-multi-user-workspaces**: Multi-user access, session isolation, pairing, trust model
    - **openclaw-agent-teams**: Agent team design, SOUL.md, hierarchy, memory architecture
+   - **openclaw-multi-agent-team-setup**: End-to-end team orchestration, commander-specialist routing, mention gating, dual-track governance
    - **openclaw-automation**: Cron jobs, webhooks/hooks, heartbeat, event-driven automation
    - **openclaw-sessions**: Session management, DM scope, resets, compaction, thread bindings
    - **openclaw-models**: Model selection, provider setup, API keys, failover, auth profiles

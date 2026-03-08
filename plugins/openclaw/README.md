@@ -9,7 +9,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 
 ## What's Included
 
-### Skills (14)
+### Skills (15)
 - **openclaw-setup** - Installation, onboarding wizard, service setup
 - **openclaw-config** - Configuration reference, CLI commands, environment variables
 - **openclaw-channels** - Channel setup (Telegram, WhatsApp, Discord, Slack), DM policies
@@ -17,6 +17,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - **openclaw-multi-agent** - Multi-agent routing, bindings, per-agent sandboxing
 - **openclaw-multi-user-workspaces** - Multi-user access, session isolation, pairing, trust model
 - **openclaw-agent-teams** - Agent team design, SOUL.md authoring, hierarchy, memory architecture
+- **openclaw-multi-agent-team-setup** - End-to-end multi-agent team orchestration, commander-specialist routing, mention gating, dual-track governance
 - **openclaw-workspace-structure** - Workspace directory structure and conventions
 - **openclaw-automation** - Cron jobs, webhooks/hooks, heartbeat, event-driven automation
 - **openclaw-sessions** - Session management, DM scope, resets, compaction, thread bindings, identity links
@@ -25,7 +26,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - **openclaw-sandboxing** - Docker sandbox configuration, container isolation, bind mounts, sandbox browser
 - **openclaw-nodes** - Device pairing, remote execution, exec routing, node commands
 
-### Slash Commands (13)
+### Slash Commands (14)
 - `/oc-status` - Quick gateway health check
 - `/oc-doctor` - Run diagnostics and auto-fix
 - `/oc-config` - View or edit configuration
@@ -39,6 +40,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - `/oc-security` - Run security audit with severity grouping and auto-fix
 - `/oc-backup` - Backup configuration, credentials, and auth profiles
 - `/oc-update` - Update OpenClaw, run diagnostics, restart gateway
+- `/oc-improve` - Scan setup and suggest improvements based on available skills and commands
 
 ### Agent (1)
 - **openclaw-ops** - Auto-triggers on OpenClaw management questions (red, sonnet)
