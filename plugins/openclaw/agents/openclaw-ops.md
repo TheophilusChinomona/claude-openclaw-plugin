@@ -6,14 +6,22 @@ description: >
   Use when the user asks about OpenClaw gateway management, channel setup,
   configuration, troubleshooting, node pairing, device management, AI
   assistant deployment, agent team design, agent operations, multi-user
-  access, or workspace sharing. Triggers on "check openclaw",
-  "configure telegram", "gateway not responding", "set up whatsapp",
-  "add agent", "restart gateway", "pair a device", "openclaw status",
+  access, workspace sharing, automation, security, sandboxing, sessions,
+  models, or nodes. Triggers on "check openclaw", "configure telegram",
+  "gateway not responding", "set up whatsapp", "add agent",
+  "restart gateway", "pair a device", "openclaw status",
   "openclaw not working", "connect discord", "openclaw doctor",
   "view openclaw logs", "agent team", "soul.md", "agent hierarchy",
   "team structure", "agent best practices", "cron schedule", "multi-user",
   "workspace access", "user pairing", "session isolation", "share gateway",
-  "add user".
+  "add user", "cron job", "webhook", "heartbeat", "hook", "schedule task",
+  "session reset", "compaction", "thread binding", "identity link",
+  "dm scope", "change model", "model provider", "api key", "failover",
+  "auth profile", "security audit", "harden openclaw", "rotate credentials",
+  "incident response", "secret management", "docker sandbox", "sandbox mode",
+  "container isolation", "bind mount", "sandbox browser", "node command",
+  "remote execution", "exec routing", "pair device", "headless node",
+  "exec approval", "backup openclaw", "update openclaw".
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 ---
 
@@ -41,6 +49,12 @@ which openclaw && openclaw --version
    - **openclaw-multi-agent**: Multi-agent routing, bindings, sandboxing
    - **openclaw-multi-user-workspaces**: Multi-user access, session isolation, pairing, trust model
    - **openclaw-agent-teams**: Agent team design, SOUL.md, hierarchy, memory architecture
+   - **openclaw-automation**: Cron jobs, webhooks/hooks, heartbeat, event-driven automation
+   - **openclaw-sessions**: Session management, DM scope, resets, compaction, thread bindings
+   - **openclaw-models**: Model selection, provider setup, API keys, failover, auth profiles
+   - **openclaw-security**: Security audit, hardening, secrets management, incident response
+   - **openclaw-sandboxing**: Docker sandbox, container isolation, bind mounts, sandbox browser
+   - **openclaw-nodes**: Device pairing, remote execution, exec routing, node commands
 
 4. For detailed information beyond the skills, reference crawled docs at `.crawled/docs.openclaw.ai/`.
 
@@ -60,6 +74,12 @@ openclaw pairing list <channel>    # Pending pairing requests
 openclaw pairing approve <ch> <code>  # Approve pairing
 openclaw agents list --bindings    # List agents and routing
 openclaw agents add <name>         # Create new agent
+openclaw cron status               # Cron scheduler status
+openclaw cron list                 # List cron jobs
+openclaw security audit            # Security audit
+openclaw security audit --deep     # Deep security audit
+openclaw nodes status              # List connected nodes
+openclaw devices list              # List pending/approved devices
 ```
 
 ## Key Paths

@@ -9,7 +9,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 
 ## What's Included
 
-### Skills (7)
+### Skills (14)
 - **openclaw-setup** - Installation, onboarding wizard, service setup
 - **openclaw-config** - Configuration reference, CLI commands, environment variables
 - **openclaw-channels** - Channel setup (Telegram, WhatsApp, Discord, Slack), DM policies
@@ -17,8 +17,15 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - **openclaw-multi-agent** - Multi-agent routing, bindings, per-agent sandboxing
 - **openclaw-multi-user-workspaces** - Multi-user access, session isolation, pairing, trust model
 - **openclaw-agent-teams** - Agent team design, SOUL.md authoring, hierarchy, memory architecture
+- **openclaw-workspace-structure** - Workspace directory structure and conventions
+- **openclaw-automation** - Cron jobs, webhooks/hooks, heartbeat, event-driven automation
+- **openclaw-sessions** - Session management, DM scope, resets, compaction, thread bindings, identity links
+- **openclaw-models** - Model selection, provider setup, API keys, failover, auth profiles
+- **openclaw-security** - Security audit, hardening, secrets management, incident response
+- **openclaw-sandboxing** - Docker sandbox configuration, container isolation, bind mounts, sandbox browser
+- **openclaw-nodes** - Device pairing, remote execution, exec routing, node commands
 
-### Slash Commands (8)
+### Slash Commands (13)
 - `/oc-status` - Quick gateway health check
 - `/oc-doctor` - Run diagnostics and auto-fix
 - `/oc-config` - View or edit configuration
@@ -27,6 +34,11 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - `/oc-logs` - View gateway logs
 - `/oc-team` - Scaffold and manage agent team workspace
 - `/oc-workspace` - Multi-user workspace access, pairing, sessions, security audit
+- `/oc-structure` - Workspace structure and conventions
+- `/oc-cron` - Manage cron jobs (list, add, run, history, remove)
+- `/oc-security` - Run security audit with severity grouping and auto-fix
+- `/oc-backup` - Backup configuration, credentials, and auth profiles
+- `/oc-update` - Update OpenClaw, run diagnostics, restart gateway
 
 ### Agent (1)
 - **openclaw-ops** - Auto-triggers on OpenClaw management questions (red, sonnet)
