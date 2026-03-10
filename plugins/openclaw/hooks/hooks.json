@@ -6,8 +6,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$PLUGIN_DIR/scripts/hooks/pre-bash-openclaw-check.js\"",
-            "timeout": 5000
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/pre-bash-openclaw-check.js\"",
+            "timeout": 5
           }
         ]
       }
@@ -17,8 +17,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$PLUGIN_DIR/scripts/hooks/session-start-docs-check.js\"",
-            "timeout": 5000
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/session-start-docs-check.js\"",
+            "timeout": 5
           }
         ]
       }
@@ -29,8 +29,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$PLUGIN_DIR/scripts/hooks/post-bash-config-validator.js\"",
-            "timeout": 5000
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/post-bash-config-validator.js\"",
+            "timeout": 5
           }
         ]
       }
