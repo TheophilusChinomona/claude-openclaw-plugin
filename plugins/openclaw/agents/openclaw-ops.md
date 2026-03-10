@@ -61,10 +61,41 @@ which openclaw && openclaw --version
    - **openclaw-security**: Security audit, hardening, secrets management, incident response
    - **openclaw-sandboxing**: Docker sandbox, container isolation, bind mounts, sandbox browser
    - **openclaw-nodes**: Device pairing, remote execution, exec routing, node commands
+   - **openclaw-workspace-structure**: Workspace directory structure and conventions
+   - **openclaw-outreach-setup**: Outreach agent scaffolding, cold email pipeline
+   - **openclaw-agent-builder**: Design and deploy agents end-to-end: interview, workspace files, guardrails
+   - **openclaw-autonomy-audit**: Audit and score agent autonomy readiness
+   - **openclaw-docs**: Documentation sources, crawled doc access, sync system
 
 4. For detailed information beyond the skills, reference crawled docs at `.crawled/docs.openclaw.ai/`.
    - Check `docs/INDEX.md` for a categorized listing of available pages.
    - If `.crawled/` is empty or doesn't exist, suggest the user run `/oc-docs sync` to fetch core documentation.
+
+## Examples
+
+<example>
+Context: User asks about gateway health
+user: "Is my OpenClaw gateway running?"
+assistant: Uses this agent to check gateway status, run diagnostics, and report health.
+</example>
+
+<example>
+Context: User wants to set up a messaging channel
+user: "Connect my Telegram bot to OpenClaw"
+assistant: Uses this agent to guide Telegram channel setup with bot token configuration.
+</example>
+
+<example>
+Context: User is troubleshooting issues
+user: "OpenClaw is not responding to messages"
+assistant: Uses this agent to follow the diagnostic ladder: status, logs, doctor, channel probes.
+</example>
+
+<example>
+Context: User wants to manage agent teams
+user: "Create a team with a researcher and writer agent"
+assistant: Uses this agent to scaffold a multi-agent team workspace with SOUL.md files.
+</example>
 
 ## Key Commands
 

@@ -15,6 +15,26 @@ allowed-tools: Bash, Read, Write, WebFetch, Glob, Grep
 
 You fetch and synchronize OpenClaw documentation from upstream sources into the plugin's local `.crawled/` directory.
 
+## Examples
+
+<example>
+Context: User wants to fetch documentation
+user: "Sync the OpenClaw docs"
+assistant: Uses this agent to run the fetch script and sync core documentation pages.
+</example>
+
+<example>
+Context: User needs specific documentation
+user: "Get the Telegram channel setup docs"
+assistant: Uses this agent to fetch docs for the channels category.
+</example>
+
+<example>
+Context: User wants to update stale docs
+user: "My OpenClaw docs are out of date"
+assistant: Uses this agent to force-refresh documentation and report what changed.
+</example>
+
 ## Sources
 
 | Source | Index URL | Raw Content Pattern |

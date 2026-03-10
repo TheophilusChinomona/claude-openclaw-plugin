@@ -14,6 +14,16 @@ claude marketplace add --source github --repo TheophilusChinomona/claude-opencla
 claude plugin install openclaw@claude-openclaw-plugin
 ```
 
+## Post-Install: Set Up Permissions
+
+Run this once after installing to avoid repeated permission prompts:
+
+```bash
+node plugins/openclaw/scripts/setup-permissions.js
+```
+
+This adds recommended tool permissions (Read, Write, Bash patterns) to your Claude Code allowlist.
+
 ## Prerequisites
 
 - **Node.js 22+** (for OpenClaw CLI)
@@ -26,7 +36,7 @@ claude plugin install openclaw@claude-openclaw-plugin
 - **openclaw-ops** — Auto-triggers on OpenClaw management questions (model: sonnet)
 - **openclaw-docs-sync** — Fetches and syncs documentation from upstream sources (model: sonnet)
 
-### Slash Commands (17)
+### Slash Commands (18)
 
 | Command | Description |
 |---------|-------------|
@@ -47,8 +57,9 @@ claude plugin install openclaw@claude-openclaw-plugin
 | `/oc-outreach` | Scaffold and manage outreach agent |
 | `/oc-autonomy` | Audit agent autonomy readiness with scored assessment |
 | `/oc-docs` | Fetch, search, and manage OpenClaw documentation |
+| `/oc-memory` | Initialize, audit, flush, and search agent memory |
 
-### Skills (19)
+### Skills (20)
 
 | Skill | Domain |
 |-------|--------|
@@ -71,6 +82,7 @@ claude plugin install openclaw@claude-openclaw-plugin
 | openclaw-agent-builder | Design and deploy agents end-to-end: interview, workspace files, guardrails |
 | openclaw-autonomy-audit | Audit and score agent autonomy readiness |
 | openclaw-docs | Documentation sources, crawled doc access, sync system |
+| openclaw-memory | Memory setup, four-layer model, shared memory, SCRIBE compression |
 
 ## Quick Start
 

@@ -1,4 +1,5 @@
 ---
+name: openclaw-workspace-structure
 description: >
   Use when the user wants to understand the OpenClaw workspace layout, inspect ~/.openclaw/ structure,
   audit agent workspaces, check workspace conventions, understand file-based orchestration,

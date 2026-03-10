@@ -12,7 +12,7 @@
   "plugins": [
     {
       "name": "openclaw",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "source": "./plugins/openclaw",
       "description": "Set up and manage your OpenClaw self-hosted AI gateway — 2 agents + 18 commands + 20 skills",
       "author": {

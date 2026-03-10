@@ -1,0 +1,27 @@
+{
+  "name": "claude-openclaw-plugin",
+  "version": "0.6.0",
+  "description": "OpenClaw gateway management plugin for Claude Code",
+  "author": "Theophilus Chinomona",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheophilusChinomona/claude-openclaw-plugin"
+  },
+  "scripts": {
+    "test": "node tests/run-all.js",
+    "validate": "claude plugin validate .",
+    "setup-permissions": "node plugins/openclaw/scripts/setup-permissions.js"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-code-plugin",
+    "openclaw",
+    "ai-gateway",
+    "self-hosted",
+    "multi-agent"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
