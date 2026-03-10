@@ -59,7 +59,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 
 ```bash
 # From GitHub (recommended)
-claude marketplace add --source github --repo TheophilusChinomona/claude-openclaw-plugin
+claude plugin marketplace add TheophilusChinomona/claude-openclaw-plugin
 claude plugin install openclaw@claude-openclaw-plugin
 ```
 
