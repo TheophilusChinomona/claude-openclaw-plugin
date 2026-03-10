@@ -1,6 +1,6 @@
 {
   "name": "openclaw",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Set up and manage your OpenClaw self-hosted AI gateway from Claude Code",
   "author": {
     "name": "Theophilus Chinomona",

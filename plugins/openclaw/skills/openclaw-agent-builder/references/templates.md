@@ -97,3 +97,42 @@ These are *starting points*; customize per agent.
 - [ ] <example: check calendar for next 24h>
 - [ ] <example: check urgent inbox>
 ```
+
+## MEMORY.md (200-line budget)
+
+```md
+# MEMORY.md
+
+> 200-line budget. Updated weekly by SCRIBE compression.
+> Only durable facts, decisions, and preferences belong here.
+
+## Preferences
+
+
+## Architecture Decisions
+
+
+## Known Issues
+
+
+## Key Facts
+
+```
+
+## Daily Log Template (memory/YYYY-MM-DD.md)
+
+```md
+# YYYY-MM-DD
+
+## Decisions
+- <decision made and rationale>
+
+## Facts Learned
+- <new information discovered>
+
+## Actions Taken
+- <significant actions performed>
+
+## Open Questions
+- <unresolved items to revisit>
+```

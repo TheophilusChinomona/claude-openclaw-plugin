@@ -96,11 +96,7 @@ Three tiers working together:
 | MEMORY.md | Curated persistent knowledge | Indefinite (updated weekly) | **SCRIBE** compresses weekly |
 | Team Memory | Shared cross-agent knowledge | Indefinite | Team leads + orchestrator |
 
-**Daily Logs:** `agents/<agent-id>/logs/YYYY-MM-DD.md`
-**MEMORY.md:** `agents/<agent-id>/MEMORY.md` (200-line budget)
-**Team Memory:** `team-memory/` directory with shared files (market-brief.md, icp-profile.md, etc.)
-
-**Compression is implicit decay.** SCRIBE reads daily logs weekly, extracts durable patterns into MEMORY.md, and archives processed logs. Information that doesn't survive compression is effectively forgotten.
+> **Full guide:** See `openclaw-memory` skill for the four-layer memory model, bootstrap file setup, shared memory access patterns, SCRIBE compression rules, failure mode defenses, retrieval setup, and the `/oc-memory` command.
 
 ## Agent Communication
 

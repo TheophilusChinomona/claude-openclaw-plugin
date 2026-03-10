@@ -11,7 +11,9 @@ description: >
   "gateway not responding", "set up whatsapp", "add agent",
   "restart gateway", "pair a device", "openclaw status",
   "openclaw not working", "connect discord", "openclaw doctor",
-  "view openclaw logs", "agent team", "soul.md", "agent hierarchy",
+  "view openclaw logs", "memory setup", "shared memory", "bootstrap files",
+  "MEMORY.md", "daily logs", "SCRIBE", "memory compression",
+  "agent team", "soul.md", "agent hierarchy",
   "team structure", "agent best practices", "cron schedule", "multi-user",
   "workspace access", "user pairing", "session isolation", "share gateway",
   "add user", "cron job", "webhook", "heartbeat", "hook", "schedule task",
@@ -51,6 +53,7 @@ which openclaw && openclaw --version
    - **openclaw-multi-agent**: Multi-agent routing, bindings, sandboxing
    - **openclaw-multi-user-workspaces**: Multi-user access, session isolation, pairing, trust model
    - **openclaw-agent-teams**: Agent team design, SOUL.md, hierarchy, memory architecture
+   - **openclaw-memory**: Memory setup, four-layer model, shared memory, SCRIBE compression, bootstrap files, `/oc-memory` command
    - **openclaw-multi-agent-team-setup**: End-to-end team orchestration, commander-specialist routing, mention gating, dual-track governance
    - **openclaw-automation**: Cron jobs, webhooks/hooks, heartbeat, event-driven automation
    - **openclaw-sessions**: Session management, DM scope, resets, compaction, thread bindings

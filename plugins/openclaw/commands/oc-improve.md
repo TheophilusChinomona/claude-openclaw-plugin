@@ -99,6 +99,21 @@ cat ~/.openclaw/workspace/IMPROVEMENT_BACKLOG.json 2>/dev/null | head -5
 ```
 Capture: LanceDB presence, shared knowledge existence, improvement backlog existence.
 
+Additionally, for each agent workspace found:
+```bash
+# Check bootstrap files
+for f in AGENTS.md SOUL.md IDENTITY.md MEMORY.md; do
+  [ -f "$WORKSPACE_ROOT/$AGENT/$f" ] && echo "OK: $f" || echo "MISSING: $f"
+done
+
+# Check MEMORY.md line count vs 200-line budget
+wc -l "$WORKSPACE_ROOT/$AGENT/MEMORY.md" 2>/dev/null
+
+# Check daily log freshness
+ls -t "$WORKSPACE_ROOT/$AGENT/memory/"*.md 2>/dev/null | head -1
+```
+Capture: bootstrap file presence in agent workspaces, MEMORY.md line count vs 200-line budget, daily log freshness.
+
 ### 9. Backup
 ```bash
 ls ~/openclaw-backup-*.tar.gz 2>/dev/null
@@ -159,7 +174,7 @@ For every finding, include the relevant skill and command using this mapping:
 | Sandbox | `openclaw-sandboxing` | `/oc-security` |
 | Automation | `openclaw-automation` | `/oc-cron` |
 | Models | `openclaw-models` | `/oc-config` |
-| Memory | `openclaw-agent-teams` | `/oc-structure memory` |
+| Memory | `openclaw-memory` | `/oc-memory audit` |
 | Backup | — | `/oc-backup` |
 | Workspace | `openclaw-workspace-structure` | `/oc-structure audit` |
 

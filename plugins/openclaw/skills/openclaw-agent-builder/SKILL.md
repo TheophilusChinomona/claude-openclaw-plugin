@@ -53,6 +53,9 @@ Optionals:
 - `memory/YYYY-MM-DD.md` seed (today) with a short "agent created" entry
 - `TOOLS.md` starter (if the user wants per-environment notes)
 
+> For memory setup details (daily logs, MEMORY.md curation, shared memory, SCRIBE compression),
+> see `openclaw-memory` skill. Use `/oc-memory init` to scaffold the memory structure.
+
 Use templates from `references/templates.md` but tailor content to the answers.
 
 ### Phase 2.5 — Autonomy configuration (Operator/Autopilot only)
