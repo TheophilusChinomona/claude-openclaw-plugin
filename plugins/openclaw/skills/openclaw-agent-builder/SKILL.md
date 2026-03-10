@@ -31,6 +31,11 @@ Minimum question set (advanced):
 5) **Memory**: Should it keep curated `MEMORY.md`? What categories matter?
 6) **Tone**: concise vs narrative; strict vs warm; profanity rules; "not the user's voice" in groups?
 7) **Tool posture**: tool-first vs answer-first; verification requirements.
+8) **Autonomy model** (skip for Advisor):
+   - Proactive check-in frequency? (e.g., every 30m, twice daily, never)
+   - Idle behavior? (check inbox, review tasks, wait for prompts)
+   - Cost guardrails? (max turns per autonomous cycle, max retries)
+   - Health-check cron? (recommended for Operator/Autopilot)
 
 ### Phase 2 — Generate workspace files
 
@@ -49,6 +54,15 @@ Optionals:
 - `TOOLS.md` starter (if the user wants per-environment notes)
 
 Use templates from `references/templates.md` but tailor content to the answers.
+
+### Phase 2.5 — Autonomy configuration (Operator/Autopilot only)
+
+If the agent's autonomy level is Operator or Autopilot, generate these additional configurations based on the Phase 1 autonomy model answers:
+
+1. **`## Autonomous Behavior` section in SOUL.md** — Explicit idle triggers, proactive check rules, frequency, and boundaries (see `openclaw-autonomy-audit` skill, Pattern A)
+2. **Populate HEARTBEAT.md** — Mission-specific `- [ ]` checklist items based on the agent's job statement and idle behavior preferences
+3. **Propose cron jobs** — Generate `openclaw cron add` commands for scheduled tasks (health checks, inbox scans, summaries) matching the stated frequency
+4. **`## Cost Controls` section in AGENTS.md** — Max turns per cycle, max retries, stop conditions, circuit breaker rules, daily budget (see `openclaw-autonomy-audit` skill, Pattern E)
 
 ### Phase 3 — Guardrails checklist
 
@@ -78,11 +92,14 @@ When improving an existing agent, ask:
 2) What autonomy changes do you want?
 3) Any new safety boundaries?
 4) Any changes to heartbeat behavior?
+5) Is the agent autonomous enough? Too autonomous?
+   Run `/oc-autonomy --agent <id>` for a scored assessment.
 
 Then propose targeted diffs to:
 
 - `SOUL.md` (persona/tone/boundaries)
 - `AGENTS.md` (operating rules + memory + delegation)
 - `HEARTBEAT.md` (small checklist)
+- Cron job additions/removals (if autonomy level changing)
 
 Keep changes minimal and surgical.
