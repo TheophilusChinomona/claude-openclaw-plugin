@@ -1,0 +1,16 @@
+{
+  "name": "openclaw",
+  "version": "0.2.0",
+  "description": "Set up and manage your OpenClaw self-hosted AI gateway from Claude Code",
+  "author": {
+    "name": "Theophilus Chinomona",
+    "url": "https://github.com/TheophilusChinomona"
+  },
+  "homepage": "https://github.com/TheophilusChinomona/claude-openclaw-plugin",
+  "repository": "https://github.com/TheophilusChinomona/claude-openclaw-plugin",
+  "license": "MIT",
+  "keywords": ["openclaw", "ai-gateway", "self-hosted", "multi-agent", "agent-teams"],
+  "agents": ["./agents/openclaw-ops.md"],
+  "commands": ["./commands/"],
+  "skills": ["./skills/"]
+}

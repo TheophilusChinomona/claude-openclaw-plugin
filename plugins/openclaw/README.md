@@ -47,13 +47,17 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 ### Agent (1)
 - **openclaw-ops** - Auto-triggers on OpenClaw management questions (red, sonnet)
 
+## Install
+
+```bash
+# From GitHub (recommended)
+claude marketplace add --source github --repo TheophilusChinomona/claude-openclaw-plugin
+claude plugin install openclaw@claude-openclaw-plugin
+```
+
 ## Quick Start
 
 ```bash
-# Install the plugin
-claude marketplace add --source directory --path ~/.claude/plugins/openclaw-plugin --name openclaw-local
-claude plugin install openclaw@openclaw-local
-
 # Then in Claude Code:
 /oc-setup          # Install and configure OpenClaw
 /oc-status         # Check gateway health

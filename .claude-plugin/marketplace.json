@@ -1,7 +1,10 @@
 {
-  "name": "openclaw-local",
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-openclaw-plugin",
+  "description": "OpenClaw gateway management plugin for Claude Code — setup, channels, agents, security, and automation",
   "owner": {
-    "name": "theoc"
+    "name": "Theophilus Chinomona",
+    "email": "theophilus@openclaw.ai"
   },
   "metadata": {
     "description": "OpenClaw gateway management plugin for Claude Code"
@@ -9,9 +12,39 @@
   "plugins": [
     {
       "name": "openclaw",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./plugins/openclaw",
-      "description": "Set up and manage your OpenClaw self-hosted AI gateway"
+      "description": "Set up and manage your OpenClaw self-hosted AI gateway — 1 agent + 14 commands + 15 skills",
+      "author": {
+        "name": "Theophilus Chinomona",
+        "email": "theophilus@openclaw.ai"
+      },
+      "homepage": "https://github.com/TheophilusChinomona/claude-openclaw-plugin",
+      "repository": "https://github.com/TheophilusChinomona/claude-openclaw-plugin",
+      "license": "MIT",
+      "keywords": [
+        "openclaw",
+        "ai-gateway",
+        "self-hosted",
+        "multi-agent",
+        "agent-teams",
+        "channels",
+        "telegram",
+        "whatsapp",
+        "discord",
+        "slack"
+      ],
+      "category": "devops",
+      "tags": [
+        "ai-gateway",
+        "self-hosted",
+        "multi-agent",
+        "agent-teams",
+        "channels",
+        "automation",
+        "security",
+        "sandboxing"
+      ]
     }
   ]
 }
