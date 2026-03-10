@@ -14,7 +14,7 @@
       "name": "openclaw",
       "version": "0.2.0",
       "source": "./plugins/openclaw",
-      "description": "Set up and manage your OpenClaw self-hosted AI gateway — 1 agent + 14 commands + 15 skills",
+      "description": "Set up and manage your OpenClaw self-hosted AI gateway — 1 agent + 15 commands + 17 skills",
       "author": {
         "name": "Theophilus Chinomona",
         "email": "theophilus@openclaw.ai"

@@ -9,7 +9,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 
 ## What's Included
 
-### Skills (16)
+### Skills (17)
 - **openclaw-setup** - Installation, onboarding wizard, service setup
 - **openclaw-config** - Configuration reference, CLI commands, environment variables
 - **openclaw-channels** - Channel setup (Telegram, WhatsApp, Discord, Slack), DM policies
@@ -26,6 +26,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - **openclaw-sandboxing** - Docker sandbox configuration, container isolation, bind mounts, sandbox browser
 - **openclaw-nodes** - Device pairing, remote execution, exec routing, node commands
 - **openclaw-outreach-setup** - Outreach agent scaffolding, cold email pipeline, human voice standard, prompt injection protection
+- **openclaw-agent-builder** - Design and deploy OpenClaw agents end-to-end: interview, workspace file generation, guardrails, acceptance tests
 
 ### Slash Commands (15)
 - `/oc-status` - Quick gateway health check

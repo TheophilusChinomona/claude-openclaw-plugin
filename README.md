@@ -25,7 +25,7 @@ claude plugin install openclaw@claude-openclaw-plugin
 
 - **openclaw-ops** — Auto-triggers on OpenClaw management questions (model: sonnet)
 
-### Slash Commands (14)
+### Slash Commands (15)
 
 | Command | Description |
 |---------|-------------|
@@ -43,8 +43,9 @@ claude plugin install openclaw@claude-openclaw-plugin
 | `/oc-backup` | Backup configuration, credentials, and auth profiles |
 | `/oc-update` | Update OpenClaw, run diagnostics, restart gateway |
 | `/oc-improve` | Scan setup and suggest improvements |
+| `/oc-outreach` | Scaffold and manage outreach agent |
 
-### Skills (15)
+### Skills (17)
 
 | Skill | Domain |
 |-------|--------|
@@ -63,6 +64,8 @@ claude plugin install openclaw@claude-openclaw-plugin
 | openclaw-security | Security audit, hardening, secrets management, incident response |
 | openclaw-sandboxing | Docker sandbox, container isolation, bind mounts, sandbox browser |
 | openclaw-nodes | Device pairing, remote execution, exec routing, node commands |
+| openclaw-outreach-setup | Outreach agent scaffolding, cold email pipeline |
+| openclaw-agent-builder | Design and deploy agents end-to-end: interview, workspace files, guardrails |
 
 ## Quick Start
 
