@@ -1,42 +1,39 @@
 {
-  "hooks": [
-    {
-      "matcher": {
-        "event": "PreToolUse",
-        "tool_name": "Bash"
-      },
-      "hooks": [
-        {
-          "type": "command",
-          "command": "node \"$PLUGIN_DIR/scripts/hooks/pre-bash-openclaw-check.js\"",
-          "timeout": 5000
-        }
-      ]
-    },
-    {
-      "matcher": {
-        "event": "SessionStart"
-      },
-      "hooks": [
-        {
-          "type": "command",
-          "command": "node \"$PLUGIN_DIR/scripts/hooks/session-start-docs-check.js\"",
-          "timeout": 5000
-        }
-      ]
-    },
-    {
-      "matcher": {
-        "event": "PostToolUse",
-        "tool_name": "Bash"
-      },
-      "hooks": [
-        {
-          "type": "command",
-          "command": "node \"$PLUGIN_DIR/scripts/hooks/post-bash-config-validator.js\"",
-          "timeout": 5000
-        }
-      ]
-    }
-  ]
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$PLUGIN_DIR/scripts/hooks/pre-bash-openclaw-check.js\"",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$PLUGIN_DIR/scripts/hooks/session-start-docs-check.js\"",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$PLUGIN_DIR/scripts/hooks/post-bash-config-validator.js\"",
+            "timeout": 5000
+          }
+        ]
+      }
+    ]
+  }
 }
