@@ -9,7 +9,7 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 
 ## What's Included
 
-### Skills (18)
+### Skills (19)
 - **openclaw-setup** - Installation, onboarding wizard, service setup
 - **openclaw-config** - Configuration reference, CLI commands, environment variables
 - **openclaw-channels** - Channel setup (Telegram, WhatsApp, Discord, Slack), DM policies
@@ -28,8 +28,9 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - **openclaw-outreach-setup** - Outreach agent scaffolding, cold email pipeline, human voice standard, prompt injection protection
 - **openclaw-agent-builder** - Design and deploy OpenClaw agents end-to-end: interview, workspace file generation, guardrails, acceptance tests
 - **openclaw-autonomy-audit** - Audit and score agent autonomy readiness, identify gaps preventing independent operation
+- **openclaw-docs** - Documentation sources, crawled doc access, sync system knowledge
 
-### Slash Commands (16)
+### Slash Commands (17)
 - `/oc-status` - Quick gateway health check
 - `/oc-doctor` - Run diagnostics and auto-fix
 - `/oc-config` - View or edit configuration
@@ -46,9 +47,11 @@ Set up and manage your OpenClaw self-hosted AI gateway from Claude Code.
 - `/oc-improve` - Scan setup and suggest improvements based on available skills and commands
 - `/oc-outreach` - Scaffold and manage outreach agent — setup, show, validate
 - `/oc-autonomy` - Audit agent autonomy readiness with scored assessment and interactive fix mode
+- `/oc-docs` - Fetch, search, and manage OpenClaw documentation from upstream sources
 
-### Agent (1)
+### Agents (2)
 - **openclaw-ops** - Auto-triggers on OpenClaw management questions (red, sonnet)
+- **openclaw-docs-sync** - Fetches and syncs OpenClaw documentation from upstream (blue, sonnet)
 
 ## Install
 

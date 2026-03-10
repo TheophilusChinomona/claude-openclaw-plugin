@@ -14,12 +14,20 @@ plugins/openclaw/
     plugin.json        # Plugin manifest (version, agents, commands, skills)
   agents/
     openclaw-ops.md    # Operations agent (auto-triggers on OpenClaw questions)
+    openclaw-docs-sync.md  # Documentation sync agent (fetches upstream docs)
   commands/
-    oc-*.md            # 14 slash commands
+    oc-*.md            # Slash commands
   skills/
     openclaw-*/
       SKILL.md         # Skill definition (YAML frontmatter + markdown)
       references/      # Supporting reference docs
+  docs/                # Committed metadata for documentation sync
+    docs-manifest.json # Tracks fetched pages, timestamps, content hashes
+    INDEX.md           # Generated categorized index with fetch status
+    FETCH-CONFIG.md    # Source URLs, priority tiers, staleness rules
+  .crawled/            # Gitignored — fetched documentation content
+    docs.openclaw.ai/  # Pages from docs site, by category
+    github/            # Pages from GitHub raw content
   README.md            # Plugin-level documentation
 ```
 

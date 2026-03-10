@@ -12,9 +12,9 @@
   "plugins": [
     {
       "name": "openclaw",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "source": "./plugins/openclaw",
-      "description": "Set up and manage your OpenClaw self-hosted AI gateway — 1 agent + 16 commands + 18 skills",
+      "description": "Set up and manage your OpenClaw self-hosted AI gateway — 2 agents + 17 commands + 19 skills",
       "author": {
         "name": "Theophilus Chinomona",
         "email": "theophilus@openclaw.ai"
@@ -34,7 +34,8 @@
         "discord",
         "slack",
         "autonomy",
-        "autonomous-agents"
+        "autonomous-agents",
+        "documentation"
       ],
       "category": "devops",
       "tags": [
@@ -46,7 +47,8 @@
         "automation",
         "security",
         "sandboxing",
-        "autonomy"
+        "autonomy",
+        "documentation"
       ]
     }
   ]

@@ -21,11 +21,12 @@ claude plugin install openclaw@claude-openclaw-plugin
 
 ## What's Included
 
-### Agent (1)
+### Agents (2)
 
 - **openclaw-ops** — Auto-triggers on OpenClaw management questions (model: sonnet)
+- **openclaw-docs-sync** — Fetches and syncs documentation from upstream sources (model: sonnet)
 
-### Slash Commands (16)
+### Slash Commands (17)
 
 | Command | Description |
 |---------|-------------|
@@ -45,8 +46,9 @@ claude plugin install openclaw@claude-openclaw-plugin
 | `/oc-improve` | Scan setup and suggest improvements |
 | `/oc-outreach` | Scaffold and manage outreach agent |
 | `/oc-autonomy` | Audit agent autonomy readiness with scored assessment |
+| `/oc-docs` | Fetch, search, and manage OpenClaw documentation |
 
-### Skills (18)
+### Skills (19)
 
 | Skill | Domain |
 |-------|--------|
@@ -68,6 +70,7 @@ claude plugin install openclaw@claude-openclaw-plugin
 | openclaw-outreach-setup | Outreach agent scaffolding, cold email pipeline |
 | openclaw-agent-builder | Design and deploy agents end-to-end: interview, workspace files, guardrails |
 | openclaw-autonomy-audit | Audit and score agent autonomy readiness |
+| openclaw-docs | Documentation sources, crawled doc access, sync system |
 
 ## Quick Start
 

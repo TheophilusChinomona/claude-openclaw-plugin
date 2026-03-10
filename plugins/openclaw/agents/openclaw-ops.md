@@ -60,6 +60,8 @@ which openclaw && openclaw --version
    - **openclaw-nodes**: Device pairing, remote execution, exec routing, node commands
 
 4. For detailed information beyond the skills, reference crawled docs at `.crawled/docs.openclaw.ai/`.
+   - Check `docs/INDEX.md` for a categorized listing of available pages.
+   - If `.crawled/` is empty or doesn't exist, suggest the user run `/oc-docs sync` to fetch core documentation.
 
 ## Key Commands
 
