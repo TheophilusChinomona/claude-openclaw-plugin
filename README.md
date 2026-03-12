@@ -31,12 +31,14 @@ This adds recommended tool permissions (Read, Write, Bash patterns) to your Clau
 
 ## What's Included
 
-### Agents (2)
+### Agents (4)
 
 - **openclaw-ops** — Auto-triggers on OpenClaw management questions (model: sonnet)
 - **openclaw-docs-sync** — Fetches and syncs documentation from upstream sources (model: sonnet)
+- **openclaw-agent-architect** — Build or optimize agent workspace files (SOUL, IDENTITY, AGENTS, MEMORY, GOALS) via interview or scan (model: sonnet)
+- **openclaw-agent-planner** — Brainstorm, design, and document agent teams; produce Agent Team Documentation (model: sonnet)
 
-### Slash Commands (18)
+### Slash Commands (20)
 
 | Command | Description |
 |---------|-------------|
@@ -58,8 +60,10 @@ This adds recommended tool permissions (Read, Write, Bash patterns) to your Clau
 | `/oc-autonomy` | Audit agent autonomy readiness with scored assessment |
 | `/oc-docs` | Fetch, search, and manage OpenClaw documentation |
 | `/oc-memory` | Initialize, audit, flush, and search agent memory |
+| `/oc-architect` | Build or optimize agent workspace files (SOUL, IDENTITY, AGENTS, MEMORY, GOALS) |
+| `/oc-planner` | Brainstorm, design, and document agent teams; produce Agent Team Documentation |
 
-### Skills (20)
+### Skills (22)
 
 | Skill | Domain |
 |-------|--------|
@@ -80,6 +84,8 @@ This adds recommended tool permissions (Read, Write, Bash patterns) to your Clau
 | openclaw-nodes | Device pairing, remote execution, exec routing, node commands |
 | openclaw-outreach-setup | Outreach agent scaffolding, cold email pipeline |
 | openclaw-agent-builder | Design and deploy agents end-to-end: interview, workspace files, guardrails |
+| openclaw-agent-architect | Build and optimize SOUL/IDENTITY/AGENTS/MEMORY/GOALS via interview and scan |
+| openclaw-agent-planner | Brainstorm, design, document agent teams; permissions and roadmap |
 | openclaw-autonomy-audit | Audit and score agent autonomy readiness |
 | openclaw-docs | Documentation sources, crawled doc access, sync system |
 | openclaw-memory | Memory setup, four-layer model, shared memory, SCRIBE compression |

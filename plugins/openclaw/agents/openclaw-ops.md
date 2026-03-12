@@ -64,6 +64,8 @@ which openclaw && openclaw --version
    - **openclaw-workspace-structure**: Workspace directory structure and conventions
    - **openclaw-outreach-setup**: Outreach agent scaffolding, cold email pipeline
    - **openclaw-agent-builder**: Design and deploy agents end-to-end: interview, workspace files, guardrails
+   - **openclaw-agent-architect**: Build and optimize SOUL/IDENTITY/AGENTS/MEMORY/GOALS via interview or scan
+   - **openclaw-agent-planner**: Brainstorm, design, document agent teams; permissions and roadmap
    - **openclaw-autonomy-audit**: Audit and score agent autonomy readiness
    - **openclaw-docs**: Documentation sources, crawled doc access, sync system
 

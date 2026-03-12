@@ -2,6 +2,28 @@
 
 All notable changes to the OpenClaw Plugin for Claude Code.
 
+## [0.8.0] - 2026-03-12
+
+### Added
+- **/oc-architect** command: Build or optimize agent workspace files (build | optimize, optional workspace path)
+- **/oc-planner** command: Brainstorm, design, and document agent teams; produce Agent Team Documentation
+- **openclaw-agent-architect** agent: Auto-triggers on agent persona, workspace files, scan/audit; applies openclaw-agent-architect skill
+- **openclaw-agent-planner** agent: Auto-triggers on planning agents, multi-agent design, permissions; applies openclaw-agent-planner skill
+
+### Changed
+- plugin.json: 4 agents (added openclaw-agent-architect, openclaw-agent-planner)
+- README: Agents 2 → 4; Commands 18 → 20; added new agents and commands to tables
+- openclaw-ops: Skills list now includes openclaw-agent-architect and openclaw-agent-planner
+
+## [0.7.0] - 2026-03-12
+
+### Added
+- **openclaw-agent-architect** skill: Build and optimize agent workspace files (SOUL.md, IDENTITY.md, AGENTS.md, MEMORY.md, GOALS.md) via guided interview or scan-and-optimize; persona coherence and token-awareness
+- **openclaw-agent-planner** skill: Brainstorm and document agent teams (Discovery → Design → Document); capability/permission matrices, inter-agent design, Agent Team Documentation package; references/permissions-reference.md for archetypes and access levels
+
+### Changed
+- README: Skills count 20 → 22; added openclaw-agent-architect and openclaw-agent-planner to skills table
+
 ## [0.6.0] - 2026-03-10
 
 ### Added
