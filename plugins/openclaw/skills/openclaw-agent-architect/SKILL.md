@@ -29,6 +29,8 @@ This skill operates in two modes:
 
 When the user wants to create new agent files, conduct a **targeted interview** before generating anything. Do not dump a generic template — ask questions, listen, then craft files that reflect the user's actual needs.
 
+**Reference Agent Templates**: Before starting the interview, offer the user reference templates for inspiration. Templates for common agent archetypes (Software Architect, Code Reviewer, Security Engineer, Technical Writer, DevOps Automator, Sprint Prioritizer, UX Researcher, Feedback Synthesizer) are available in `references/agent-templates/index.md`. Browse these to borrow personality traits, communication styles, and boundary patterns as starting points.
+
 #### Interview Protocol
 
 Run the interview in **phases**. Each phase covers one file. Ask 3-5 focused questions per phase, wait for answers, then generate that file before moving to the next phase. The user can skip phases for files they don't need.

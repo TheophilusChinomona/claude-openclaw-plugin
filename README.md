@@ -6,13 +6,24 @@ OpenClaw connects messaging apps (WhatsApp, Telegram, Discord, Slack) to AI codi
 
 ## Install
 
-```bash
-# Add the marketplace
-claude marketplace add --source github --repo TheophilusChinomona/claude-openclaw-plugin
+Run these commands **in Claude Code** (type them in the chat):
 
-# Install the plugin
-claude plugin install openclaw@claude-openclaw-plugin
 ```
+/plugin marketplace add TheophilusChinomona/claude-openclaw-plugin
+/plugin install openclaw@claude-openclaw-plugin
+```
+
+**Important:** Add the marketplace using the GitHub repo above (not a raw URL to `marketplace.json`). That way the plugin installs and updates correctly.
+
+## Updating
+
+To get the latest version of the plugin:
+
+1. In Claude Code, run: `/plugin marketplace update`
+2. Reinstall the plugin: `/plugin install openclaw@claude-openclaw-plugin` (or uninstall it, then install again)
+3. Restart Claude Code if the new version doesn’t load
+
+If you still don’t see updates, try closing and reopening Claude Code, or remove the cached plugin (e.g. the folder for this plugin under `~/.claude/plugins/cache/`) and install again.
 
 ## Post-Install: Set Up Permissions
 
@@ -38,7 +49,7 @@ This adds recommended tool permissions (Read, Write, Bash patterns) to your Clau
 - **openclaw-agent-architect** — Build or optimize agent workspace files (SOUL, IDENTITY, AGENTS, MEMORY, GOALS) via interview or scan (model: sonnet)
 - **openclaw-agent-planner** — Brainstorm, design, and document agent teams; produce Agent Team Documentation (model: sonnet)
 
-### Slash Commands (20)
+### Slash Commands (22)
 
 | Command | Description |
 |---------|-------------|
@@ -62,8 +73,10 @@ This adds recommended tool permissions (Read, Write, Bash patterns) to your Clau
 | `/oc-memory` | Initialize, audit, flush, and search agent memory |
 | `/oc-architect` | Build or optimize agent workspace files (SOUL, IDENTITY, AGENTS, MEMORY, GOALS) |
 | `/oc-planner` | Brainstorm, design, and document agent teams; produce Agent Team Documentation |
+| `/oc-wizard` | Full guided journey to create a complete agent workspace (discovery → design → scaffold → audit) |
+| `/oc-workspace-audit` | Comprehensive scored audit of workspace quality (SOUL, IDENTITY, AGENTS, memory, config) |
 
-### Skills (22)
+### Skills (24)
 
 | Skill | Domain |
 |-------|--------|
@@ -89,6 +102,8 @@ This adds recommended tool permissions (Read, Write, Bash patterns) to your Clau
 | openclaw-autonomy-audit | Audit and score agent autonomy readiness |
 | openclaw-docs | Documentation sources, crawled doc access, sync system |
 | openclaw-memory | Memory setup, four-layer model, shared memory, SCRIBE compression |
+| openclaw-workspace-audit | Comprehensive scored workspace quality audit (200-point rubric) |
+| openclaw-workspace-wizard | Full guided workspace creation journey (6 phases with checkpoints) |
 
 ## Quick Start
 
@@ -102,12 +117,16 @@ This adds recommended tool permissions (Read, Write, Bash patterns) to your Clau
 
 ## Development
 
-```bash
-# Local development install
-claude marketplace add --source directory --path /path/to/openclaw-plugin --name claude-openclaw-plugin
-claude plugin install openclaw@claude-openclaw-plugin
+For local development, add the marketplace from the cloned repo directory (the folder that contains `.claude-plugin/marketplace.json`). Run in Claude Code:
 
-# Validate plugin structure
+```
+/plugin marketplace add /path/to/openclaw-plugin
+/plugin install openclaw@claude-openclaw-plugin
+```
+
+Validate plugin structure (from the repo root in a terminal):
+
+```bash
 claude plugin validate .
 ```
 
