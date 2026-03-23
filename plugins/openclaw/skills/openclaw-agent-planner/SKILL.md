@@ -103,8 +103,6 @@ For every agent, specify:
 - What actions it can take autonomously
 - Rate limits or usage constraints
 
-For capability categories and archetype profiles, see [references/permissions-reference.md](references/permissions-reference.md).
-
 Format as a permission matrix:
 
 ```
