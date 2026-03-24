@@ -83,7 +83,11 @@ openclaw pairing approve telegram <CODE>
 
 ## WhatsApp Setup (Baileys + QR)
 
-1. Configure channel:
+1. Install the WhatsApp plugin (required as of v2026.3.22+):
+```bash
+openclaw plugins install @openclaw/whatsapp
+```
+2. Configure channel:
 ```json5
 {
   channels: {
@@ -95,9 +99,44 @@ openclaw pairing approve telegram <CODE>
   },
 }
 ```
-2. Start gateway — QR code appears in terminal or Control UI
-3. Scan QR with WhatsApp on your phone (Settings > Linked Devices)
-4. Approve DMs via pairing codes
+3. Start gateway — QR code appears in terminal or Control UI
+4. Scan QR with WhatsApp on your phone (Settings > Linked Devices)
+5. Approve DMs via pairing codes
+
+### WhatsApp Troubleshooting
+
+**Plugin not found after update (`plugin not found: whatsapp`):**
+WhatsApp was unbundled from the main package in v2026.3.22 but the runtime files were missing in v2026.3.22 and v2026.3.23. Fixed in v2026.3.23-2. If on an affected version, upgrade:
+```bash
+npm install -g openclaw@latest
+openclaw gateway restart
+```
+If still missing, install plugin manually:
+```bash
+openclaw plugins install @openclaw/whatsapp
+openclaw gateway restart
+```
+
+**Session conflict (status 440):**
+Happens when re-linking while the old session is still active. The gateway auto-recovers — wait for "Listening for personal WhatsApp inbound messages." in logs. If it doesn't recover:
+```bash
+openclaw channels login --channel whatsapp   # fresh QR scan
+```
+
+**Messages arriving but no reply (messagesHandled: 0):**
+Check `dmPolicy` and `allowFrom`. With `dmPolicy: "allowlist"`, messages from numbers not in `allowFrom` are silently dropped — no pairing code is sent.
+```bash
+openclaw channels status --probe             # shows allowFrom list
+openclaw config set channels.whatsapp.allowFrom '["+1234567890", "+0987654321"]'
+openclaw gateway restart
+```
+
+**Verify channel health:**
+```bash
+openclaw channels status --probe             # running/connected + last inbound time
+openclaw logs --limit 100                    # look for inbound/dispatch events
+openclaw status --deep                       # full health check incl. WhatsApp
+```
 
 ## Discord Setup (Bot API + Gateway)
 

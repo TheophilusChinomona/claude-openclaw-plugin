@@ -99,13 +99,47 @@
 ### Prerequisites
 - WhatsApp account on phone
 - Phone with WhatsApp installed
+- WhatsApp plugin installed (unbundled as of v2026.3.22)
 
 ### Steps
-1. Add WhatsApp config to `openclaw.json`
-2. Start gateway — QR code appears
-3. On phone: Settings > Linked Devices > Link a Device
-4. Scan QR code
-5. Approve first DM via pairing code
+1. Install the plugin:
+```bash
+openclaw plugins install @openclaw/whatsapp
+```
+2. Add WhatsApp config to `openclaw.json`
+3. Start gateway — QR code appears
+4. On phone: Settings > Linked Devices > Link a Device
+5. Scan QR code
+6. Approve first DM via pairing code
+
+### Troubleshooting
+
+**`plugin not found: whatsapp` after update:**
+WhatsApp was unbundled in v2026.3.22. Runtime files were missing in v2026.3.22 and v2026.3.23 — fixed in v2026.3.23-2.
+```bash
+npm install -g openclaw@latest         # upgrade to get bundled runtime
+openclaw gateway restart
+# If still broken, install manually:
+openclaw plugins install @openclaw/whatsapp
+openclaw gateway restart
+```
+
+**Status 440 session conflict during re-link:**
+The new QR session kicks out the old one — this is normal. Gateway auto-restarts in 5s. If it loops:
+```bash
+# On phone: Settings > Linked Devices > remove all stale "OpenClaw" entries
+openclaw channels login --channel whatsapp   # fresh QR
+```
+
+**Messages received but agent never replies:**
+Most common cause: number not in `allowFrom` when `dmPolicy: "allowlist"`. Messages are silently dropped — no pairing code, no error.
+```bash
+openclaw channels status --probe   # check allow: list
+# Add the missing number:
+openclaw config set channels.whatsapp.allowFrom '["+27xxxxxxxxx", "+27yyyyyyyyy"]'
+openclaw gateway restart
+```
+Confirm fix: `openclaw logs --limit 100` should show `messagesHandled > 0` in the heartbeat after next message.
 
 ### Config
 ```json5
